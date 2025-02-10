@@ -1,0 +1,748 @@
+.chatBotMain {
+    text-align: left;
+    width: 100%;
+}
+
+.chatBotMain a,
+.chatBotMain hr {
+    color: inherit
+}
+
+.chatBotMain progress,
+.chatBotMain sub,
+.chatBotMain sup {
+    vertical-align: baseline
+}
+
+.chatBotMain blockquote,
+.chatBotMain body,
+.chatBotMain dd,
+.chatBotMain dl,
+.chatBotMain fieldset,
+.chatBotMain figure,
+.chatBotMain h1,
+.chatBotMain h2,
+.chatBotMain h3,
+.chatBotMain h4,
+.chatBotMain h5,
+.chatBotMain h6,
+.chatBotMain hr,
+.chatBotMain menu,
+.chatBotMain ol,
+.chatBotMain p,
+.chatBotMain pre,
+.chatBotMain ul {
+    margin: 0
+}
+
+.chatBotMain fieldset,
+.chatBotMain legend,
+.chatBotMain menu,
+.chatBotMain ol,
+.chatBotMain ul {
+    padding: 0
+}
+
+.chatBotMain .text-\[\#333\],
+.chatBotMain .text-gray-400,
+.chatBotMain .text-gray-500,
+.chatBotMain .text-gray-600,
+.chatBotMain .text-gray-700,
+.chatBotMain .text-gray-800 {
+    --tw-text-opacity: 1
+}
+
+.chatBotMain .bg-blue-100,
+.chatBotMain .bg-gray-100,
+.chatBotMain .bg-gray-200,
+.chatBotMain .bg-white {
+    --tw-bg-opacity: 1
+}
+
+::after,
+::before {
+    box-sizing: border-box;
+    border: 0 solid #e5e7eb;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x: ;
+    --tw-pan-y: ;
+    --tw-pinch-zoom: ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-ordinal: ;
+    --tw-slashed-zero: ;
+    --tw-numeric-figure: ;
+    --tw-numeric-spacing: ;
+    --tw-numeric-fraction: ;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur: ;
+    --tw-brightness: ;
+    --tw-contrast: ;
+    --tw-grayscale: ;
+    --tw-hue-rotate: ;
+    --tw-invert: ;
+    --tw-saturate: ;
+    --tw-sepia: ;
+    --tw-drop-shadow: ;
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia:
+}
+
+::after,
+::before {
+    --tw-content: ''
+}
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+}
+
+body {
+    line-height: inherit
+}
+
+.chatBotMain hr {
+    height: 0;
+    border-top-width: 1px
+}
+
+abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted
+}
+
+.chatBotMain h1,
+.chatBotMain h2,
+.chatBotMain h3,
+.chatBotMain h4,
+.chatBotMain h5,
+.chatBotMain h6 {
+    font-size: inherit;
+    font-weight: inherit
+}
+
+.chatBotMain a {
+    text-decoration: inherit
+}
+
+.chatBotMain b,
+.chatBotMain strong {
+    font-weight: bolder
+}
+
+.chatBotMain code,
+.chatBotMain kbd,
+.chatBotMain pre,
+.chatBotMain samp {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 1em
+}
+
+.chatBotMain small {
+    font-size: 80%
+}
+
+.chatBotMain sub,
+.chatBotMain sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative
+}
+
+.chatBotMain sub {
+    bottom: -.25em
+}
+
+.chatBotMain sup {
+    top: -.5em
+}
+
+.chatBotMain table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse
+}
+
+.chatBotMain button,
+.chatBotMain input,
+.chatBotMain optgroup,
+.chatBotMain select,
+.chatBotMain textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0
+}
+
+.chatBotMain button,
+.chatBotMain select {
+    text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+.chatBotMain button {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none
+}
+
+:-moz-focusring {
+    outline: auto
+}
+
+:-moz-ui-invalid {
+    box-shadow: none
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto
+}
+
+.chatBotMain [type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+.chatBotMain summary {
+    display: list-item
+}
+
+.chatBotMain menu,
+.chatBotMain ol,
+.chatBotMain ul {
+    list-style: none
+}
+
+.chatBotMain textarea {
+    resize: vertical
+}
+
+.chatBotMain input::-moz-placeholder,
+.chatBotMain textarea::-moz-placeholder {
+    opacity: 1;
+    color: #9ca3af
+}
+
+.chatBotMain input:-ms-input-placeholder,
+.chatBotMain textarea:-ms-input-placeholder {
+    opacity: 1;
+    color: #9ca3af
+}
+
+.chatBotMain input::placeholder,
+.chatBotMain textarea::placeholder {
+    opacity: 1;
+    color: #9ca3af
+}
+
+.chatBotMain .cursor-pointer,
+[role=button],
+button {
+    cursor: pointer
+}
+
+:disabled {
+    cursor: default
+}
+
+.chatBotMain audio,
+.chatBotMain canvas,
+.chatBotMain embed,
+.chatBotMain iframe,
+.chatBotMain img,
+.chatBotMain object,
+.chatBotMain svg,
+.chatBotMain video {
+    display: block;
+    vertical-align: middle
+}
+
+.chatBotMain img,
+.chatBotMain video {
+    max-width: 100%;
+    height: auto
+}
+
+.chatBotMain .hidden,
+[hidden] {
+    display: none
+}
+
+.chatBotMain .fixed {
+    position: fixed
+}
+
+.chatBotMain .bottom-0 {
+    bottom: 0
+}
+
+.chatBotMain .right-0 {
+    right: 0
+}
+
+.chatBotMain .z-50 {
+    z-index: 50
+}
+
+.chatBotMain .col-span-2 {
+    grid-column: span 2/span 2
+}
+
+.chatBotMain .mt-2 {
+    margin-top: .5rem
+}
+
+.chatBotMain .mt-1 {
+    margin-top: .25rem
+}
+
+.chatBotMain .mt-3 {
+    margin-top: .75rem
+}
+
+.chatBotMain .-mt-3 {
+    margin-top: -.75rem
+}
+
+.chatBotMain .flex {
+    display: flex
+}
+
+.chatBotMain .table {
+    display: table
+}
+
+.chatBotMain .grid {
+    display: grid
+}
+
+.chatBotMain .h-20 {
+    height: 5rem
+}
+
+.chatBotMain .h-\[calc\(100vh-290px\)\] {
+    height: calc(100vh - 290px)
+}
+
+.chatBotMain .h-6 {
+    height: 1.5rem
+}
+
+.chatBotMain .h-12 {
+    height: 3rem
+}
+
+.chatBotMain .w-full {
+    width: 100%
+}
+
+.chatBotMain .w-7 {
+    width: 1.75rem
+}
+
+.chatBotMain .w-20 {
+    width: 5rem
+}
+
+.chatBotMain .w-5\/6 {
+    width: 83.333333%
+}
+
+.chatBotMain .w-6 {
+    width: 1.5rem
+}
+
+.chatBotMain .min-w-0 {
+    min-width: 0
+}
+
+.chatBotMain .flex-1 {
+    flex: 1 1 0%
+}
+
+.chatBotMain .grid-flow-col {
+    grid-auto-flow: column
+}
+
+.chatBotMain .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+}
+
+.chatBotMain .flex-col {
+    flex-direction: column
+}
+
+.chatBotMain .flex-wrap {
+    flex-wrap: wrap
+}
+
+.chatBotMain .flex-nowrap {
+    flex-wrap: nowrap
+}
+
+.chatBotMain .items-end {
+    align-items: flex-end
+}
+
+.chatBotMain .items-center {
+    align-items: center
+}
+
+.chatBotMain .justify-end {
+    justify-content: flex-end
+}
+
+.chatBotMain .justify-center {
+    justify-content: center
+}
+
+.chatBotMain .justify-between {
+    justify-content: space-between
+}
+
+.chatBotMain .justify-around {
+    justify-content: space-around
+}
+
+.chatBotMain .gap-3 {
+    gap: .75rem
+}
+
+.chatBotMain .gap-2 {
+    gap: .5rem
+}
+
+.chatBotMain .space-x-2>:not([hidden])~:not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(.5rem * calc(1 - var(--tw-space-x-reverse)))
+}
+
+.chatBotMain .overflow-x-auto {
+    overflow-x: auto
+}
+
+.chatBotMain .overflow-x-scroll {
+    overflow-x: scroll
+}
+
+.chatBotMain .overflow-y-scroll {
+    overflow-y: scroll
+}
+
+.chatBotMain .whitespace-nowrap {
+    white-space: nowrap
+}
+
+.chatBotMain .rounded-lg {
+    border-radius: .5rem
+}
+
+.chatBotMain .rounded-xl {
+    border-radius: .75rem
+}
+
+.chatBotMain .rounded-full {
+    border-radius: 9999px
+}
+
+.chatBotMain .border {
+    border-width: 1px
+}
+
+.chatBotMain .border-b {
+    border-bottom-width: 1px
+}
+
+.chatBotMain .border-gray-100 {
+    --tw-border-opacity: 1;
+    border-color: rgb(243 244 246 / var(--tw-border-opacity))
+}
+
+.chatBotMain .border-gray-200 {
+    --tw-border-opacity: 1;
+    border-color: rgb(229 231 235 / var(--tw-border-opacity))
+}
+
+.chatBotMain .bg-white {
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+
+.chatBotMain .bg-gray-200 {
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity))
+}
+
+.chatBotMain .bg-gray-100 {
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity))
+}
+
+.chatBotMain .bg-blue-100 {
+    background-color: rgb(219 234 254 / var(--tw-bg-opacity))
+}
+
+.chatBotMain .p-4 {
+    padding: 1rem
+}
+
+.chatBotMain .p-3 {
+    padding: .75rem
+}
+
+.chatBotMain .p-2 {
+    padding: .5rem
+}
+
+.chatBotMain .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem
+}
+
+.chatBotMain .py-1 {
+    padding-top: .25rem;
+    padding-bottom: .25rem
+}
+
+.chatBotMain .px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem
+}
+
+.chatBotMain .pr-3,
+.chatBotMain .px-3 {
+    padding-right: .75rem
+}
+
+.chatBotMain .py-px {
+    padding-top: 1px;
+    padding-bottom: 1px
+}
+
+.chatBotMain .pt-2,
+.chatBotMain .py-2 {
+    padding-top: .5rem
+}
+
+.chatBotMain .pb-2,
+.chatBotMain .py-2 {
+    padding-bottom: .5rem
+}
+
+.chatBotMain .px-3 {
+    padding-left: .75rem
+}
+
+.chatBotMain .pl-2 {
+    padding-left: .5rem
+}
+
+.chatBotMain .pb-4 {
+    padding-bottom: 1rem
+}
+
+.chatBotMain .pr-4 {
+    padding-right: 1rem
+}
+
+.chatBotMain .text-left {
+    text-align: left
+}
+
+.chatBotMain .text-right {
+    text-align: right
+}
+
+.chatBotMain .text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem
+}
+
+.chatBotMain .text-xs {
+    font-size: .75rem;
+    line-height: 1rem
+}
+
+.chatBotMain .text-base {
+    font-size: 1rem;
+    line-height: 1.5rem
+}
+
+.chatBotMain .font-semibold {
+    font-weight: 600
+}
+
+.chatBotMain .font-bold {
+    font-weight: 700
+}
+
+.chatBotMain .font-medium {
+    font-weight: 500
+}
+
+.chatBotMain .leading-none {
+    line-height: 1
+}
+
+.chatBotMain .text-gray-500 {
+    color: rgb(107 114 128 / var(--tw-text-opacity))
+}
+
+.chatBotMain .text-gray-800 {
+    color: rgb(31 41 55 / var(--tw-text-opacity))
+}
+
+.chatBotMain .text-gray-400 {
+    color: rgb(156 163 175 / var(--tw-text-opacity))
+}
+
+.chatBotMain .text-gray-700 {
+    color: rgb(55 65 81 / var(--tw-text-opacity))
+}
+
+.chatBotMain .text-gray-600 {
+    color: rgb(75 85 99 / var(--tw-text-opacity))
+}
+
+.chatBotMain .text-\[\#333\] {
+    color: rgb(51 51 51 / var(--tw-text-opacity))
+}
+
+.chatBotMain .shadow-md {
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.chatBotMain .placeholder\:text-base::-moz-placeholder {
+    font-size: 1rem;
+    line-height: 1.5rem
+}
+
+.chatBotMain .placeholder\:text-base:-ms-input-placeholder {
+    font-size: 1rem;
+    line-height: 1.5rem
+}
+
+.chatBotMain .placeholder\:text-base::placeholder {
+    font-size: 1rem;
+    line-height: 1.5rem
+}
+
+.chatBotMain .placeholder\:text-gray-300::-moz-placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity))
+}
+
+.chatBotMain .placeholder\:text-gray-300:-ms-input-placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity))
+}
+
+.chatBotMain .placeholder\:text-gray-300::placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity))
+}
+
+.chatBotMain .visited\:bg-blue-100:visited {
+    background-color: rgb(219 234 254)
+}
+
+.chatBotMain .hover\:bg-purple-100:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 232 255 / var(--tw-bg-opacity))
+}
+
+.chatBotMain .focus\:outline-none:focus {
+    outline: transparent solid 2px;
+    outline-offset: 2px
+}
+
+@media (min-width:1024px) {
+    .chatBotMain .lg\:bottom-5 {
+        bottom: 1.25rem
+    }
+
+    .chatBotMain .lg\:right-5 {
+        right: 1.25rem
+    }
+
+    .chatBotMain .lg\:h-auto {
+        height: auto
+    }
+
+    .chatBotMain .lg\:max-h-48 {
+        max-height: 12rem
+    }
+
+    .chatBotMain .lg\:w-96 {
+        width: 24rem
+    }
+}
+
+@theme {
+    --color-theme: #ff5733;
+    --color-textTheme: #565656;
+}
+
+.chatBotMain .activeChat {
+    display: none;
+}
+
+.chatBotMain .scrollbar::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+.chatBotMain .scrollbar::-webkit-scrollbar-track {
+
+    background: #f7f4ed;
+}
+
+.chatBotMain .scrollbar::-webkit-scrollbar-thumb {
+    background: #e0cbcb;
+    border: 3px solid #f6f7ed;
+}
+
+.chatBotMain .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+}
+.chatBotMain .activeTopic{
+    background-color: #E1EFFE;
+}

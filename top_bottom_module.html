@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <!-- <link rel="stylesheet" href="css/finalStyle.css"> -->
+
+
+    <title>Chat Bot</title>
+</head>
+
+<body>
+    <div id="chatBotMain">
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+
+            #chatBotMain{
+                --primary-font: Arial, Helvetica, sans-serif;
+                /* color variables */
+                --primary-color: #565656;
+                --secondary-color:#8b8b8b;
+                --tertiary-color:#000;
+                --inactive-color:#fc6161;
+
+                /* bg-variables */
+                --bg-primary: #f0f0f0;
+                --bg-secondary:#e2e2e2;
+                --bg-tertiary:#c5eafb;
+                --bg-inactive:#f8bbbb;
+                --bg-white:#ffffff;
+
+                /* svg icon color */
+                --svg-primary:#1B1C1F;
+                --svg-secondary:#97A3B7;
+                --svg-tertiary:#DDDDDE;
+                --svg-blue:#a0e7de;
+                --svg-hover:#9370db;
+            }
+
+            #chatBotMain .svg-primary{
+                fill: var(--svg-primary);
+            }
+
+            #chatBotMain .svg-secondary{
+                fill: var(--svg-secondary);
+            }
+
+            #chatBotMain .svg-tertiary{
+                fill: var(--svg-tertiary);
+            }
+
+            #chatBotMain .svg-blue{
+                fill: var(--svg-blue);
+            }
+            
+            /* hover icon */
+            #chatBotMain .svg-primary:hover{
+                fill: var(--svg-hover);
+            }
+
+            #chatBotMain .svg-secondary:hover{
+                fill: var(--svg-hover);
+            }
+
+            #chatBotMain .svg-tertiary:hover{
+                fill: var(--svg-hover);
+            }
+
+             /* Dark Mode */
+             @media (prefers-color-scheme: dark) {
+             #chatBotMain {
+                --primary-color: #d1d1d1;
+                --secondary-color: #a9a9a9;
+                --tertiary-color: #ffffff;
+                --inactive-color: #ff7676;
+
+                --bg-primary: #141718;
+                --bg-secondary: #2a2a2a;
+                --bg-tertiary: #37474f;
+                --bg-inactive: #ffb3b3;
+                --bg-white:#232627;
+
+                 /* #1B1C1F #97A3B7*/
+                /* svg icon color */
+                --svg-primary:#DDDDDE;
+                --svg-secondary:#DDDDDE;
+                --svg-tertiary:#DDDDDE;
+                --svg-blue:#a0e7de;
+            }
+            }
+
+            /* text colors */
+            #chatBotMain .text-primary{
+                color:var(--primary-color);
+            }
+
+            #chatBotMain .text-secondary{
+                color:var(--secondary-color);
+            }
+
+            #chatBotMain .text-tertiary{
+                color:var(--tertiary-color);
+            }
+
+            #chatBotMain p,h1,h2,h3,span{
+                font-family: var(--primary-font);
+            }
+
+            /* bg colors */
+            #chatBotMain .bg-primary{
+                background-color:var(--bg-primary);
+            }
+
+            #chatBotMain .bg-secondary{
+                background-color:var(--bg-secondary);
+            }
+
+            #chatBotMain .bg-tertiary{
+                background-color:var(--bg-tertiary);
+            }
+
+            #chatBotMain .bg-inactive{
+                background-color:var(--bg-inactive);
+            }
+
+           #chatBotMain{
+                width: 100%;
+                text-align: left;
+           }
+
+           #chatBotMain h3,
+           #chatBotMain h2,
+           #chatBotMain .text-primary{
+            color: var(--primary-color);
+           }
+
+            #chatBotMain h1,
+            #chatBotMain h2,
+            #chatBotMain h3,
+            #chatBotMain h4,
+            #chatBotMain h5,
+            #chatBotMain h6,
+            #chatBotMain p{
+                margin: 0
+            }
+
+            /* .text-\[\#333\],
+            .text-gray-400,
+            .text-gray-500,
+            .text-gray-600,
+            .text-gray-700,
+            .text-gray-800 {
+                --tw-text-opacity: 1
+            } */
+
+            /* #chatBotMain .bg-blue-100
+            {
+                background-color: var(--bg-white) ;
+            }
+            #chatBotMain .bg-gray-100,
+            #chatBotMain .bg-gray-200,
+            #chatBotMain .bg-white {
+                background-color: var(--bg-white);
+            } */
+
+
+            #chatBotMain input{
+                border: 0 solid #e5e7eb;
+            }
+
+            #chatBotMain a {
+                text-decoration: inherit
+            }
+
+            #chatBotMain .text-2xl{
+                font-size: 1.5rem;
+            }
+
+            #chatBotMain .hidden,
+            [hidden] {
+                display: none
+            }
+
+            #chatBotMain .fixed {
+                position: fixed
+            }
+
+            #chatBotMain .bottom-0 {
+                bottom: 0
+            }
+
+            #chatBotMain .right-0 {
+                right: 0
+            }
+
+            #chatBotMain .z-50 {
+                z-index: 50
+            }
+
+            /* .col-span-2 {
+                grid-column: span 2/span 2
+            } */
+
+            #chatBotMain .mt-2 {
+                margin-top: .5rem
+            }
+
+            #chatBotMain .mt-1 {
+                margin-top: .25rem
+            }
+
+            #chatBotMain .mt-3 {
+                margin-top: .75rem
+            }
+
+            #chatBotMain .-mt-3 {
+                margin-top: -.75rem
+            }
+
+            #chatBotMain .flex {
+                display: flex
+            }
+
+            #chatBotMain .table {
+                display: table
+            }
+
+            #chatBotMain .grid {
+                display: grid
+            }
+
+            #chatBotMain .h-20 {
+                height: 5rem
+            }
+
+            #chatBotMain .h-\[calc\(100vh-290px\)\] {
+                height: calc(100vh - 290px)
+            }
+
+            #chatBotMain .h-6 {
+                height: 1.5rem
+            }
+
+            #chatBotMain .h-12 {
+                height: 3rem
+            }
+
+            #chatBotMain .w-full {
+                width: 100%
+            }
+
+            #chatBotMain .w-7 {
+                width: 1.75rem
+            }
+
+            #chatBotMain .w-20 {
+                width: 5rem
+            }
+
+            #chatBotMain .w-5\/6 {
+                width: 83.333333%
+            }
+
+            #chatBotMain .w-6 {
+                width: 1.5rem
+            }
+
+            #chatBotMain .min-w-0 {
+                min-width: 0
+            }
+            #chatBotMain .max-w-60 {
+               max-width: 60%;
+            }
+
+            #chatBotMain .flex-1 {
+                flex: 1 1 0%
+            }
+
+            #chatBotMain .grid-flow-col {
+                grid-auto-flow: column
+            }
+
+            #chatBotMain .grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr))
+            }
+
+            #chatBotMain .flex-col {
+                flex-direction: column
+            }
+
+            #chatBotMain .flex-wrap {
+                flex-wrap: wrap
+            }
+
+            #chatBotMain .flex-nowrap {
+                flex-wrap: nowrap
+            }
+
+            #chatBotMain .items-end {
+                align-items: flex-end
+            }
+
+            #chatBotMain .items-center {
+                align-items: center
+            }
+
+            #chatBotMain .justify-end {
+                justify-content: flex-end
+            }
+
+            #chatBotMain .justify-center {
+                justify-content: center
+            }
+
+            #chatBotMain .justify-between {
+                justify-content: space-between
+            }
+
+            #chatBotMain .justify-around {
+                justify-content: space-around
+            }
+
+            #chatBotMain .gap-3 {
+                gap: .75rem
+            }
+
+            #chatBotMain .gap-2 {
+                gap: .5rem
+            }
+
+            #chatBotMain .space-x-2>:not([hidden])~:not([hidden]) {
+                --tw-space-x-reverse: 0;
+                margin-right: calc(.5rem * var(--tw-space-x-reverse));
+                margin-left: calc(.5rem * calc(1 - var(--tw-space-x-reverse)))
+            }
+
+            #chatBotMain .overflow-x-auto {
+                overflow-x: auto
+            }
+
+            #chatBotMain .overflow-x-scroll {
+                overflow-x: scroll
+            }
+
+            #chatBotMain .overflow-y-scroll {
+                overflow-y: scroll
+            }
+
+            #chatBotMain .whitespace-nowrap {
+                white-space: nowrap
+            }
+
+            #chatBotMain .rounded-lg {
+                border-radius: .5rem
+            }
+
+            #chatBotMain .rounded-xl {
+                border-radius: .75rem
+            }
+
+            #chatBotMain .rounded-full {
+                border-radius: 9999px
+            }
+
+            #chatBotMain .border {
+                border-width: 1px
+            }
+
+            #chatBotMain .border-b {
+                border-bottom: 2px solid var(--bg-secondary);
+            }
+
+            #chatBotMain .border-gray-100 {
+                --tw-border-opacity: 1;
+                border-color: rgb(243 244 246 / var(--tw-border-opacity))
+            }
+
+            #chatBotMain .border-gray-200 {
+                --tw-border-opacity: 1;
+                border-color: rgb(229 231 235 / var(--tw-border-opacity))
+            }
+
+            #chatBotMain .bg-white {
+                background-color: var(--bg-white)
+            }
+
+            #chatBotMain .bg-gray-200 {
+                background-color: rgb(229 231 235 / var(--tw-bg-opacity))
+            }
+
+            #chatBotMain .bg-gray-100 {
+                background-color: rgb(243 244 246 / var(--tw-bg-opacity))
+            }
+
+            #chatBotMain .bg-blue-100 {
+                background-color: rgb(219 234 254 / var(--tw-bg-opacity))
+            }
+
+            #chatBotMain .p-4 {
+                padding: 1rem
+            }
+
+            #chatBotMain .p-3 {
+                padding: .75rem
+            }
+
+            #chatBotMain .p-2 {
+                padding: .5rem
+            }
+
+            #chatBotMain .px-4 {
+                padding-left: 1rem;
+                padding-right: 1rem
+            }
+
+            #chatBotMain .py-1 {
+                padding-top: .25rem;
+                padding-bottom: .25rem
+            }
+
+            #chatBotMain .px-6 {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem
+            }
+
+            #chatBotMain .pr-3,
+            #chatBotMain .px-3 {
+                padding-right: .75rem
+            }
+
+            #chatBotMain .py-px {
+                padding-top: 1px;
+                padding-bottom: 1px
+            }
+
+            #chatBotMain .pt-2,
+            #chatBotMain .py-2 {
+                padding-top: .5rem
+            }
+
+            #chatBotMain .pb-2,
+            #chatBotMain .py-2 {
+                padding-bottom: .5rem
+            }
+
+            #chatBotMain .px-3 {
+                padding-left: .75rem
+            }
+
+            #chatBotMain .pl-2 {
+                padding-left: .5rem
+            }
+
+            #chatBotMain .pb-4 {
+                padding-bottom: 1rem
+            }
+
+            #chatBotMain .pr-4 {
+                padding-right: 1rem
+            }
+
+            #chatBotMain .text-left {
+                text-align: left
+            }
+
+            #chatBotMain .text-right {
+                text-align: right
+            }
+
+            #chatBotMain .text-sm {
+                font-size: .875rem;
+                line-height: 1.25rem
+            }
+
+            #chatBotMain .text-xs {
+                font-size: .75rem;
+                line-height: 1rem
+            }
+
+            #chatBotMain .text-base {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+
+            #chatBotMain .text-lg {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+
+            #chatBotMain .text-xl {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+
+            #chatBotMain .font-semibold {
+                font-weight: 600;
+            }
+
+            #chatBotMain .font-bold {
+                font-weight: 700;
+            }
+
+            #chatBotMain .font-medium {
+                font-weight: 500;
+            }
+
+            #chatBotMain .font-normal {
+                font-weight: 400;
+            }
+
+            #chatBotMain .leading-none {
+                line-height: 1;
+            }
+
+            /* #chatBotMain .text-gray-500 {
+                color: rgb(107 114 128 / var(--tw-text-opacity))
+            }
+
+            #chatBotMain .text-gray-800 {
+                color: var(--primary-color);
+            }
+
+            #chatBotMain .text-gray-400 {
+                color: rgb(156 163 175 / var(--tw-text-opacity))
+            }
+
+            #chatBotMain .text-gray-700 {
+                color:var(--secondary-color);
+            }
+
+            #chatBotMain .text-gray-600 {
+                color:var(--tertiary-color)
+            }
+
+            #chatBotMain .text-\[\#333\] {
+                color: rgb(51 51 51 / var(--tw-text-opacity))
+            } */
+
+            #chatBotMain .shadow-md {
+                --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+            }
+
+            #chatBotMain .placeholder\:text-base::-moz-placeholder {
+                font-size: 1rem;
+                line-height: 1.5rem
+            }
+
+            #chatBotMain .placeholder\:text-base:-ms-input-placeholder {
+                font-size: 1rem;
+                line-height: 1.5rem
+            }
+
+            #chatBotMain .placeholder\:text-base::placeholder {
+                font-size: 1rem;
+                line-height: 1.5rem
+            }
+
+            #chatBotMain .placeholder\:text-gray-300::-moz-placeholder {
+                --tw-text-opacity: 1;
+                color: rgb(209 213 219 / var(--tw-text-opacity))
+            }
+
+            #chatBotMain .placeholder\:text-gray-300:-ms-input-placeholder {
+                --tw-text-opacity: 1;
+                color: rgb(209 213 219 / var(--tw-text-opacity))
+            }
+
+            #chatBotMain .placeholder\:text-gray-300::placeholder {
+                --tw-text-opacity: 1;
+                color: rgb(209 213 219 / var(--tw-text-opacity))
+            }
+
+            #chatBotMain .visited\:bg-blue-100:visited {
+                background-color: rgb(219 234 254)
+            }
+
+            #chatBotMain .hover\:bg-purple-100:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(243 232 255 / var(--tw-bg-opacity))
+            }
+
+            #chatBotMain .focus\:outline-none:focus {
+                outline: transparent solid 2px;
+                outline-offset: 2px
+            }
+
+            
+
+            @media (min-width:1024px) {
+                #chatBotMain .lg\:bottom-5 {
+                    bottom: 1.25rem
+                }
+
+                #chatBotMain .lg\:right-5 {
+                    right: 1.25rem
+                }
+
+                #chatBotMain .lg\:h-auto {
+                    height: auto
+                }
+
+                #chatBotMain .lg\:h-15 {
+                    height: 15rem
+                }
+
+                #chatBotMain .lg\:w-96 {
+                    width: 24rem
+                }
+                #chatBotMain .max-ch-60{
+                    max-width: 60ch;
+                }
+            }
+            @media (min-width:1280px) {
+                    /* #chatBotMain .max-ch-40{
+                    max-width: 70ch;
+                } */
+            }
+
+        
+
+            #chatBotMain .activeChat {
+                display: none;
+            }
+
+            #chatBotMain .scrollbar::-webkit-scrollbar {
+                width: 1px;
+                height: 1px;
+            }
+
+            #chatBotMain .scrollbar::-webkit-scrollbar-track {
+
+                background: transparent;
+            }
+
+            #chatBotMain .scrollbar::-webkit-scrollbar-thumb {
+                background: transparent;
+                border: 3px solid transparent;
+            }
+
+            #chatBotMain .scrollbar::-webkit-scrollbar-thumb:hover {
+                background: transparent;
+            }
+            #chatBotMain .activeTopic{
+                background-color: var(--bg-tertiary);
+            }
+
+            #chatBotMain .tab:hover{
+                background-color: var(--bg-tertiary); ;
+            }
+
+            #chatBotMain .inActive {
+                position: relative;
+                background-color: var(--bg-inactive); /* Ensure the parent is positioned */
+            }
+
+            #chatBotMain .inActive:hover {
+                background-color: var(--bg-inactive); /* Ensure the parent is positioned */
+            }
+
+            #chatBotMain .inActive svg {
+                fill:var(--inactive-color);
+            }
+
+            #chatBotMain .inActive::after{
+                background-color: var(--inactive-color);
+                content: "";
+                position: absolute;
+                top: 19px;
+                left: 8px;
+                rotate: 45deg;
+                color: var(--tertiary-color);
+                width:70%;
+                height: 2px;
+            }
+
+            #chatBotMain .Leading-16{
+                line-height: 16px;
+            }
+
+            #chatBotMain .visualizer-container {
+                width: 45px;
+                height: 35px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center; /* Centers bars */
+                align-items: center;
+            }
+
+            #chatBotMain #visualizer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+            }
+
+            #chatBotMain #visualizer div {
+                width: 3px;
+                background: linear-gradient(180deg, #a0e7de, #a0e7de);
+                margin: 0 1px;
+                transition: height 0.1s ease-in-out;
+            }
+
+        </style>
+
+        <!-- Top module -->
+        <div id="topModule" class="flex border border-gray-100 bg-primary p-4 gap-3 rounded-lg shadow-md activeChat">
+
+            <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/avatar.png" alt="Avatar" class="h-20">
+
+            <div class="flex w-full flex-wrap items-center justify-between gap-3 min-w-0 ">
+                <div class="min-w-0 ">
+                   <div class="max-ch-40">
+                    <p class="text-sm text-gray-500 text-primary">I'll quickly give you an overview...</p>
+                    <h3 class="text-gray-800 text-xl font-normal text-primary max-ch-60">We are known for our signature sound, solid construction, and sleek finish.</h3>
+                   </div>
+
+                    <div class="flex space-x-2 mt-2 overflow-x-auto flex-nowrap scrollbar">
+                        <div
+                            class="activeTopic bg-secondary px-4 py-1 rounded-xl whitespace-nowrap cursor-pointer tab">
+                            <p class="text-xs font-bold text-secondary">Explore</p>
+                            <p class="text-sm font-medium text-tertiary">Take a virtual tour</p>
+                        </div>
+                        <div
+                            class="bg-secondary px-4 py-1 rounded-xl whitespace-nowrap cursor-pointer tab">
+                            <p class="text-xs text-secondary font-bold">Learn</p>
+                            <p class="text-tertiary text-sm font-medium">Our EEG technology</p>
+                        </div>
+                        <div
+                            class="bg-secondary px-4 py-1 rounded-xl whitespace-nowrap cursor-pointer tab">
+                            <p class="text-xs text-secondary font-bold">Search</p>
+                            <p class="text-tertiary text-sm font-medium">Extra earpads</p>
+                        </div>
+                        <div
+                            class="bg-secondary px-4 py-1 rounded-xl whitespace-nowrap cursor-pointer tab">
+                            <p class="text-xs text-secondary font-bold">Buy</p>
+                            <p class="text-tertiary text-sm font-medium">MW 75 neuro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3">
+                    <div class="flex items-center justify-center gap-3">
+                        <p class="text-secondary text-sm">Best value for money...</p>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" class="svg-blue">
+                                <path class="svg-" d="M6 20.9162L9 20.9162L9 5.22905L6 5.22905L6 20.9162ZM12 26.1453H15L15 0L12 0L12 26.1453ZM0 15.6872H3L3 10.4581H0L0 15.6872ZM18 20.9162H21L21 5.22905L18 5.22905L18 20.9162ZM24 10.4581V15.6872H27V10.4581H24Z"/>
+                            </svg> -->
+                            <div class="visualizer-container">
+                                <div id="visualizer"></div>
+                            </div>
+                        <!-- <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/audio.svg" alt="Loading"> -->
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="javascript:void(0);"
+                            class="flex items-center gap-2 bg-secondary px-3 py-1 rounded-full text-sm text-gray-700 tab inActive" id="micOn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" class="svg-primary">
+                                    <mask id="mask0_444_11019" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                                    <rect y="0.5" width="24" height="24" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_444_11019)">
+                                    <path d="M12 14.5C11.1667 14.5 10.4583 14.2083 9.875 13.625C9.29167 13.0417 9 12.3333 9 11.5V5.5C9 4.66667 9.29167 3.95833 9.875 3.375C10.4583 2.79167 11.1667 2.5 12 2.5C12.8333 2.5 13.5417 2.79167 14.125 3.375C14.7083 3.95833 15 4.66667 15 5.5V11.5C15 12.3333 14.7083 13.0417 14.125 13.625C13.5417 14.2083 12.8333 14.5 12 14.5ZM11 21.5V18.425C9.26667 18.1917 7.83333 17.4167 6.7 16.1C5.56667 14.7833 5 13.25 5 11.5H7C7 12.8833 7.4875 14.0625 8.4625 15.0375C9.4375 16.0125 10.6167 16.5 12 16.5C13.3833 16.5 14.5625 16.0125 15.5375 15.0375C16.5125 14.0625 17 12.8833 17 11.5H19C19 13.25 18.4333 14.7833 17.3 16.1C16.1667 17.4167 14.7333 18.1917 13 18.425V21.5H11ZM12 12.5C12.2833 12.5 12.5208 12.4042 12.7125 12.2125C12.9042 12.0208 13 11.7833 13 11.5V5.5C13 5.21667 12.9042 4.97917 12.7125 4.7875C12.5208 4.59583 12.2833 4.5 12 4.5C11.7167 4.5 11.4792 4.59583 11.2875 4.7875C11.0958 4.97917 11 5.21667 11 5.5V11.5C11 11.7833 11.0958 12.0208 11.2875 12.2125C11.4792 12.4042 11.7167 12.5 12 12.5Z"/>
+                                    </g>
+                                </svg>
+                            <!-- <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/mic (1).svg"
+                                alt="Loading"> -->
+                            <!-- <span class="text-sm">Voice on</span> -->
+                        </a>
+
+                        <a href="javascript:void(0);"
+                            class="flex items-center gap-2 bg-secondary px-3 py-2 rounded-full text-sm text-gray-700 tab">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27" class="svg-primary">
+                                <path opacity="0.3" d="M5.82812 14.2749H8.77056L11.0268 16.658L11.0268 9.69531L8.77056 12.0784H5.82812V14.2749Z" fill="#171A1F"/>
+                                <path d="M3.75 9.88357L3.75 16.4729H7.90892L13.1076 21.9639L13.1076 4.3925L7.90892 9.88357H3.75ZM11.0281 9.69687L11.0281 16.6596L8.7719 14.2764L5.82946 14.2764L5.82946 12.08L8.7719 12.08L11.0281 9.69687ZM15.187 8.75241L15.187 17.593C16.7258 16.7913 17.7864 15.1221 17.7864 13.1782C17.7859 11.3013 16.7789 9.58661 15.187 8.75241ZM15.187 3.54688V5.8092C18.1919 6.75366 20.3857 9.69687 20.3857 13.1782C20.3857 16.6596 18.1919 19.6028 15.187 20.5472L15.187 22.8096C19.3564 21.8102 22.4652 17.8786 22.4652 13.1782C22.4652 8.47786 19.3564 4.54625 15.187 3.54688Z"/>
+                            </svg>
+                            <!-- <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/Volume up 1.svg"
+                            alt="Loading"> -->
+                        </a>
+
+                        <a href="javascript:void(0);" onclick="showBottomModule()"
+                            class="bg-secondary py-1 px-4 rounded-full flex items-center justify-center tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" class="svg-primary">
+                                    <path d="M1.26536 10.1673L0.332031 9.23398L4.06536 5.50065L0.332031 1.76732L1.26536 0.833984L4.9987 4.56732L8.73203 0.833984L9.66536 1.76732L5.93203 5.50065L9.66536 9.23398L8.73203 10.1673L4.9987 6.43398L1.26536 10.1673Z"/>
+                                </svg>
+                            <!-- <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/close.svg"
+                                alt="Loading"> -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Bottom module -->
+        <div id="bottomModule" class="w-full bottom-0 right-0 z-50 p-3 bg-primary rounded-lg flex-col lg:w-96 lg:h-auto fixed lg:bottom-5 lg:right-5">
+
+            <!-- top section -->
+            <div id="slideBox" class="activeChat">
+                <div class="pb-2 border-b border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-bold text-primary text-sm">AI Powered</h3>
+                        <a onclick="toggleBtn()" href="javascript:void(0);" id="closeSvg"
+                            class="bg-secondary py-2 px-3 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" class="svg-primary">
+                                <path d="M1.26536 10.1673L0.332031 9.23398L4.06536 5.50065L0.332031 1.76732L1.26536 0.833984L4.9987 4.56732L8.73203 0.833984L9.66536 1.76732L5.93203 5.50065L9.66536 9.23398L8.73203 10.1673L4.9987 6.43398L1.26536 10.1673Z"/>
+                            </svg>
+                            <!-- <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/close.svg"> -->
+                        </a>
+                    </div>
+                    <div class="bg-white w-full rounded-xl flex items-center gap-3 mt-1">
+                        <div>
+                            <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/avatar.png"
+                                class="w-20 rounded-lg">
+                        </div>
+                        <div>
+                            <h2 class="font-bold text-primary text-lg">Speak to our expert avatar</h2>
+                            <div class="flex items-center justify-center gap-3 mt-1">
+                                <a href="javascript:void(0)" onclick="showTopModule()" class="cursor-pointer">
+                                    <!-- <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/Volume up 1.svg"
+                                    alt="Loading"> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27" class="svg-primary">
+                                        <path opacity="0.3" d="M5.82812 14.2749H8.77056L11.0268 16.658L11.0268 9.69531L8.77056 12.0784H5.82812V14.2749Z" fill="#171A1F"/>
+                                        <path d="M3.75 9.88357L3.75 16.4729H7.90892L13.1076 21.9639L13.1076 4.3925L7.90892 9.88357H3.75ZM11.0281 9.69687L11.0281 16.6596L8.7719 14.2764L5.82946 14.2764L5.82946 12.08L8.7719 12.08L11.0281 9.69687ZM15.187 8.75241L15.187 17.593C16.7258 16.7913 17.7864 15.1221 17.7864 13.1782C17.7859 11.3013 16.7789 9.58661 15.187 8.75241ZM15.187 3.54688V5.8092C18.1919 6.75366 20.3857 9.69687 20.3857 13.1782C20.3857 16.6596 18.1919 19.6028 15.187 20.5472L15.187 22.8096C19.3564 21.8102 22.4652 17.8786 22.4652 13.1782C22.4652 8.47786 19.3564 4.54625 15.187 3.54688Z"/>
+                                    </svg>
+                                </a>
+                                <p class="text-primary text-base Leading-16">This option turns on voice
+                                    and conversation
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- left-right chat -->
+                <div class="lg:h-15 h-[calc(100vh-290px)]  overflow-y-scroll scrollbar">
+                    <div class="flex items-end justify-end gap-2 mt-2">
+                        <div class="bg-white rounded-xl p-2 w-5/6 text-right">
+                            <p class="text-primary text-sm">Hi, I am MD AI, Please tell me how I can be of help to you today.</p>
+                            <p class="text-primary text-xs">Master & Dynamic is the best sound engineer.</p>
+                        </div>
+                        <div>
+                            <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/avatar.png"
+                                alt="Loading" class="w-6 h-6 rounded-full">
+                        </div>
+                    </div>
+                    <div class="flex items-end gap-2 mt-2">
+                        <div>
+                            <div
+                                class="w-6 h-6 bg-white rounded-full flex items-center justify-center text-sm text-gray-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="svg-tertiary">
+                                        <path d="M8 8C6.9 8 5.95833 7.60833 5.175 6.825C4.39167 6.04167 4 5.1 4 4C4 2.9 4.39167 1.95833 5.175 1.175C5.95833 0.391667 6.9 0 8 0C9.1 0 10.0417 0.391667 10.825 1.175C11.6083 1.95833 12 2.9 12 4C12 5.1 11.6083 6.04167 10.825 6.825C10.0417 7.60833 9.1 8 8 8ZM0 16V13.2C0 12.6333 0.145833 12.1125 0.4375 11.6375C0.729167 11.1625 1.11667 10.8 1.6 10.55C2.63333 10.0333 3.68333 9.64583 4.75 9.3875C5.81667 9.12917 6.9 9 8 9C9.1 9 10.1833 9.12917 11.25 9.3875C12.3167 9.64583 13.3667 10.0333 14.4 10.55C14.8833 10.8 15.2708 11.1625 15.5625 11.6375C15.8542 12.1125 16 12.6333 16 13.2V16H0Z"/>
+                                    </svg>
+                                <!-- <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/person.svg"
+                                    alt="Loading"> -->
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-2 w-5/6 text-left">
+                            <p class=" text-primary text-sm">Hi, I am MD AI, Please tell me how I can be of help to you today.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="flex items-end justify-end gap-2 mt-2">
+                        <div class="bg-white rounded-xl p-2 w-5/6 text-right">
+                            <p class=" text-primary text-sm">Hi, I am MD AI, please tell mehow can I be of your help
+                                today ?</p>
+                        </div>
+                        <div>
+                            <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/avatar.png"
+                                alt="Loading" class="w-6 h-6 rounded-full">
+                        </div>
+                    </div>
+                    <div class="flex items-end gap-2 mt-2">
+                        <div>
+                            <div
+                                class="w-6 h-6 bg-white rounded-full flex items-center justify-center text-sm text-gray-400">
+                                <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/person.svg"
+                                    alt="Loading">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="svg-tertiary">
+                                    <path d="M8 8C6.9 8 5.95833 7.60833 5.175 6.825C4.39167 6.04167 4 5.1 4 4C4 2.9 4.39167 1.95833 5.175 1.175C5.95833 0.391667 6.9 0 8 0C9.1 0 10.0417 0.391667 10.825 1.175C11.6083 1.95833 12 2.9 12 4C12 5.1 11.6083 6.04167 10.825 6.825C10.0417 7.60833 9.1 8 8 8ZM0 16V13.2C0 12.6333 0.145833 12.1125 0.4375 11.6375C0.729167 11.1625 1.11667 10.8 1.6 10.55C2.63333 10.0333 3.68333 9.64583 4.75 9.3875C5.81667 9.12917 6.9 9 8 9C9.1 9 10.1833 9.12917 11.25 9.3875C12.3167 9.64583 13.3667 10.0333 14.4 10.55C14.8833 10.8 15.2708 11.1625 15.5625 11.6375C15.8542 12.1125 16 12.6333 16 13.2V16H0Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-blue-100 rounded-xl p-2 w-5/6 text-left">
+                            <p class=" text-primary text-sm">Hi, I am MD AI, please tell mehow can I be of your help
+                                today ?</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- bottom section -->
+            <div>
+                <div id="showTopic" class="overflow-x-scroll w-full grid grid-flow-col gap-3 mt-2 scrollbar">
+                    <a href="javascript:void(0)"
+                        class="bg-secondary border-b-none rounded-full px-4 py-2 whitespace-nowrap visited:bg-blue-100 cursor-pointer tab activeTopic">
+                        <p class="text-secondary text-xs font-semibold">Search</p>
+                        <p class="text-tertiary text-sm font-medium">Noise-cancellation headphones</p>
+                    </a>
+                    <a href="javascript:void(0)"
+                        class="bg-secondary border-b-none rounded-full px-4 py-2 whitespace-nowrap cursor-pointer tab">
+                        <p class="text-secondary text-xs font-semibold">Learn</p>
+                        <p class="text-tertiary text-sm font-medium">Our EEG technology</p>
+                    </a>
+                    <a href="javascript:void(0)"
+                        class="bg-secondary border-b-none rounded-full px-4 py-2 whitespace-nowrap cursor-pointer tab">
+                        <p class="text-secondary text-xs font-semibold">Learn</p>
+                        <p class="text-tertiary text-sm font-medium">Our EEG technology</p>
+                    </a>
+                    <a href="javascript:void(0)"
+                        class="bg-secondary border-b-none rounded-full px-4 py-2 whitespace-nowrap cursor-pointer tab">
+                        <p class="text-secondary text-xs font-semibold">Search</p>
+                        <p class="text-tertiary text-sm font-medium">Noise-cancellation headphone</p>
+                    </a>
+                    <a href="javascript:void(0)"
+                        class="bg-secondary border-b-none rounded-full px-4 py-2 whitespace-nowrap cursor-pointer tab">
+                        <p class="text-secondary text-xs font-semibold">Search</p>
+                        <p class="text-tertiary text-sm font-medium">Noise-cancellation headphone</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-3 flex items-center justify-between gap-3">
+                <div class="flex items-center justify-between gap-3 bg-white rounded-lg px-3">
+                    <div class="flex-1">
+                        <input type="text" onclick="showChat()" placeholder="Ask MD AI"
+                            class="focus:outline-none w-full text-sm text-tertiary bg-white rounded-lg py-2 placeholder:text-secondary placeholder:text-base">
+                    </div>
+                    <div class="text-base flex items-center gap-3 pt-2">
+                        <a href="#9">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
+                                    <path d="M2.65453 3L2.64453 10L17.6445 12L2.64453 14L2.65453 21L23.6445 12L2.65453 3ZM4.64453 8.25V6.03L12.1545 9.25L4.64453 8.25ZM4.65453 17.97V15.75L12.1645 14.75L4.65453 17.97Z" class="svg-secondary"/>
+                                </svg>
+                            <!-- <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/Send 1.svg"> -->
+                        </a>
+                        <a href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" class="svg-secondary">
+                                    <mask id="mask0_444_10915" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                                    <rect x="0.644531" width="24" height="24" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_444_10915)">
+                                    <path d="M12.6445 14C11.8112 14 11.1029 13.7083 10.5195 13.125C9.9362 12.5417 9.64453 11.8333 9.64453 11V5C9.64453 4.16667 9.9362 3.45833 10.5195 2.875C11.1029 2.29167 11.8112 2 12.6445 2C13.4779 2 14.1862 2.29167 14.7695 2.875C15.3529 3.45833 15.6445 4.16667 15.6445 5V11C15.6445 11.8333 15.3529 12.5417 14.7695 13.125C14.1862 13.7083 13.4779 14 12.6445 14ZM11.6445 21V17.925C9.9112 17.6917 8.47786 16.9167 7.34453 15.6C6.2112 14.2833 5.64453 12.75 5.64453 11H7.64453C7.64453 12.3833 8.13203 13.5625 9.10703 14.5375C10.082 15.5125 11.2612 16 12.6445 16C14.0279 16 15.207 15.5125 16.182 14.5375C17.157 13.5625 17.6445 12.3833 17.6445 11H19.6445C19.6445 12.75 19.0779 14.2833 17.9445 15.6C16.8112 16.9167 15.3779 17.6917 13.6445 17.925V21H11.6445ZM12.6445 12C12.9279 12 13.1654 11.9042 13.357 11.7125C13.5487 11.5208 13.6445 11.2833 13.6445 11V5C13.6445 4.71667 13.5487 4.47917 13.357 4.2875C13.1654 4.09583 12.9279 4 12.6445 4C12.3612 4 12.1237 4.09583 11.932 4.2875C11.7404 4.47917 11.6445 4.71667 11.6445 5V11C11.6445 11.2833 11.7404 11.5208 11.932 11.7125C12.1237 11.9042 12.3612 12 12.6445 12Z"/>
+                                    </g>
+                                </svg>
+                            <!-- <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/mic.svg"> -->
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg w-auto px-6">
+                    <div class="py-px">
+                        <!-- <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/avatar.png" alt="Loading"
+                            class="h-12 -mt-3"> -->
+                        <!-- <img src="chatBot_images/Setoo Fav icon.svg" alt="Loading"
+                        class="h-10"> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none" class="__web-inspector-hide-shortcut__">
+                            <path d="M21.783 22.0145C20.2361 23.5673 18.341 24.3179 16.0006 24.3179C13.6603 24.3179 11.7651 23.5673 10.2182 22.0145C9.17364 20.966 8.52292 19.6653 8.17472 18.21H0.0976562C0.497228 22.0603 1.99277 25.2174 4.58428 27.7156C7.72377 30.718 11.514 32.2192 16.0006 32.2192C20.4872 32.2192 24.2261 30.718 27.3656 27.7156C30.0085 25.2117 31.504 22.0088 31.9036 18.21H23.8265C23.4783 19.6596 22.8276 20.9602 21.783 22.0145Z" fill="#EF5449"/>
+                            <path d="M10.269 10.2562C11.8159 8.75505 13.711 7.95289 16 7.95289C18.289 7.95289 20.1898 8.70348 21.731 10.2562C23.1295 11.66 23.9229 13.4076 24.0257 15.4589H32C31.903 11.0068 30.356 7.2997 27.365 4.45201C24.2768 1.50119 20.538 0 16 0C11.462 0 7.67749 1.50119 4.58366 4.45201C1.64395 7.30543 0.0970389 10.9553 0 15.4589H7.97431C8.07135 13.4076 8.81912 11.6543 10.269 10.2562Z" fill="#292A2C"/>
+                            <!-- Code injected by live-server -->
+                        </svg>
+                    </div>
+                    <!-- <a href="#10">
+                        <img src="https://tailwind-bookmark.netlify.app/images/chatBotImages/right_arro.svg">
+                    </a> -->
+                </div>
+            </div>
+        </div>
+
+
+<script>
+
+        const fftSize = 64; // Reduce FFT size for better performance
+        const numBars = 5; // Set only 5 bars
+        const visualizer = document.getElementById("visualizer");
+        const micOn = document.getElementById("micOn");
+
+        let audioContext, analyser, dataArray;
+
+        // Initialize Audio Analyzer
+        async function initAudioAnalyzer() {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            analyser = audioContext.createAnalyser();
+            analyser.fftSize = fftSize;
+
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            const source = audioContext.createMediaStreamSource(stream);
+            source.connect(analyser);
+
+            dataArray = new Uint8Array(analyser.frequencyBinCount);
+            createBars();
+            animate();
+        }
+
+        // Create 5 bars (centered)
+        function createBars() {
+            for (let i = 0; i < numBars; i++) {
+                const bar = document.createElement("div");
+                visualizer.appendChild(bar);
+            }
+        }
+
+        // Animate the Visualizer
+        function animate() {
+            analyser.getByteFrequencyData(dataArray);
+
+            const bars = visualizer.children;
+            const middleIndex = Math.floor(numBars / 2); // 3rd bar (center)
+
+            for (let i = 0; i < numBars; i++) {
+                let value = dataArray[Math.floor(i * (dataArray.length / numBars))];
+
+                if (i === middleIndex) {
+                    value = 1.8; // Make the middle bar grow more when voice is high
+                }
+
+                bars[i].style.height = `${(value / 255) * 100}%`;
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        // Start Button Click Event
+        micOn.addEventListener("click", async () => {
+            if (!audioContext) {
+                await initAudioAnalyzer();
+                
+            }
+            audioContext.resume();
+
+        });
+
+
+        let slideBox = document.getElementById("slideBox");
+        let topModule = document.getElementById("topModule");
+        let bottomModule = document.getElementById("bottomModule");
+
+        function toggleBtn() {
+            slideBox.classList.add("activeChat");
+            document.querySelector("#showTopic a.activeTopic")?.classList.remove("activeTopic");
+        }
+        function showChat() {
+            slideBox.classList.remove("activeChat");
+            slideBox.classList.add("slide");
+        }
+        document.getElementById("toggleBtn").addEventListener("click", toggleBtn);
+        document.getElementById("showChat").addEventListener("click", showChat);
+
+        function showTopModule(){
+            topModule.classList.remove("activeChat");
+            bottomModule.classList.add("activeChat");
+            // alert('showTopModule')
+        }
+
+        function showBottomModule(){
+            topModule.classList.add("activeChat");
+            bottomModule.classList.remove("activeChat")
+            // alert('showBottomModule');
+        }
+
+    </script>
+    </div>
+</body>
+
+</html>
